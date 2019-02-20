@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "install": "^0.12.2",
+    "moment": "^2.18.1",
     "npm": "^6.8.0",
     "prop-types": "15.5.10",
     "react": "15.5.4",
