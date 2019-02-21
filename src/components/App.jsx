@@ -17,7 +17,7 @@ class App extends React.Component {
 
   handleAddingNewTicketToList(newTicket){
     var newMasterTicketList = this.state.masterTicketList.slice();
-    newTicket.formattedWaitTime = (newTicket.timeOpen).fromNow(true);
+    newTicket.formattedWaitTime = (newTicket.timeOpen).fromNow();
     newMasterTicketList.push(newTicket);
     this.setState({masterTicketList: newMasterTicketList});
   }
@@ -32,7 +32,7 @@ class App extends React.Component {
   updateTicketElapsedWaitTime() {
     let newMasterTicketList = this.state.masterTicketList.slice();
     newMasterTicketList.forEach((ticket) =>
-      ticket.formattedWaitTime = (ticket.timeOpen).fromNow(true)
+      ticket.formattedWaitTime = (ticket.timeOpen).fromNow()
     );
     this.setState({masterTicketList: newMasterTicketList});
   }
